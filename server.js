@@ -18,6 +18,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({ message: 'API Infográfico Interativo - Online' });
+});
+
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log('Conectado ao MongoDB');
