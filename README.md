@@ -1,79 +1,98 @@
-# API - Infografico Interativo 
+# Infographic Interactivity API
 
-## Sobre o projeto
+API REST responsável pelo gerenciamento de dados do sistema **Infográfico Interativo – Livro das Formas de Expressão (IPHAN)**.
 
-Este repositório contém a **API do infográfico interativo sobre o Livro das Formas de Expressão do IPHAN**, desenvolvido como parte do meu **Trabalho de Conclusão de Curso (TCC)**.
+Este projeto foi desenvolvido como parte de um Trabalho de Conclusão de Curso (TCC) do Bacharelado em Sistemas e Mídias Digitais da Universidade Federal do Ceará (UFC).
 
-A API é responsável por gerenciar os **dados dos bens culturais**, bem como a **autenticação de usuários**, permitindo que o sistema seja integrado ao front-end do infográfico interativo.
+---
 
-Na versão atual do projeto, a API atende ao **Livro das Formas de Expressão**, mas foi estruturada para permitir a inclusão de **outros livros de registro do patrimônio imaterial do IPHAN** no futuro.
+## Sobre o Projeto
+
+Esta API fornece suporte ao sistema de visualização interativa do patrimônio cultural imaterial brasileiro, sendo responsável por:
+
+- Gerenciamento de bens culturais  
+- Autenticação de usuários  
+- Fornecimento de dados para o front-end do infográfico  
+
+A arquitetura foi projetada para ser modular e escalável, permitindo a futura expansão para outros livros de registro do IPHAN.
 
 ---
 
 ## Funcionalidades
 
-* Autenticação de usuários
-* Cadastro e gerenciamento de bens culturais
-* Fornecimento de dados para o front-end do infográfico interativo
-* Estrutura preparada para expansão para outros livros do IPHAN
+- Autenticação de usuários  
+- CRUD de bens culturais  
+- API REST para consumo do front-end  
+- Estrutura preparada para múltiplos livros do IPHAN  
+- Middleware de autenticação e segurança  
 
 ---
 
-## Tecnologias utilizadas
+## Tecnologias
 
-* Node.js
-* Express
-* MongoDB
-* Mongoose
+- Node.js  
+- Express.js  
+- MongoDB  
+- Mongoose  
 
 ---
 
-## Estrutura do projeto
+## Arquitetura
 
-```
+O projeto segue uma arquitetura baseada em separação de responsabilidades:
+
+server.js → Rotas → Controllers → Models → MongoDB
+
+---
+
+## Estrutura do Projeto
+
 infografico-interativo-api/
-├── server.js            # Arquivo principal da aplicação
-├── .env                 # Variáveis de ambiente
-├── models/              # Modelos do banco de dados
-│   ├── User.js          # Modelo de usuário
-│   └── Bem.js           # Modelo de bem cultural
-├── routes/              # Rotas da API
-│   ├── auth.js          # Rotas de autenticação
-│   └── bens.js          # Rotas de bens culturais
-├── controllers/         # Controladores da aplicação
+├── server.js
+├── .env
+├── models/
+│   ├── User.js
+│   └── Bem.js
+├── routes/
+│   ├── auth.js
+│   └── bens.js
+├── controllers/
 │   ├── authController.js
 │   └── bemController.js
-└── middleware/          # Middlewares
-    └── auth.js          # Middleware de autenticação
-```
+├── middleware/
+│   └── auth.js
 
 ---
 
-## Integração com o front-end
+## Integração com o Front-end
 
-Esta API foi desenvolvida para servir o projeto:
+Esta API é consumida pelo front-end do projeto:
 
-**Infográfico Interativo - Livro das Formas de Expressão**
+**Infográfico Interativo – Livro das Formas de Expressão**
 
-O front-end consome esta API para:
-
-* obter dados dos bens culturais
-* gerenciar autenticação
-* atualizar informações quando necessário
-
----
-
-## Possibilidades de expansão
-
-Embora a versão atual esteja focada no **Livro das Formas de Expressão**, a API foi estruturada para permitir que futuramente sejam adicionados outros livros do IPHAN, como:
-
-* Livro dos Saberes
-* Livro das Celebrações
-* Livro dos Lugares
+Principais integrações:
+- Autenticação de usuários  
+- Consulta de bens culturais  
+- Atualização e gerenciamento de conteúdo  
 
 ---
 
-## Autor
+## Escalabilidade
 
-Mateus de Aquino
-Universidade Federal do Ceará
+A API foi projetada para expansão futura, permitindo:
+
+- Inclusão de novos livros do IPHAN:
+  - Livro dos Saberes  
+  - Livro das Celebrações  
+  - Livro dos Lugares  
+- Expansão do sistema de autenticação  
+- Evolução para painel administrativo completo  
+
+---
+
+## 👨‍💻 Autor
+
+Mateus de Aquino -
+Universidade Federal do Ceará (UFC)
+
+Projeto acadêmico desenvolvido para fins de pesquisa em Visualização da Informação e Patrimônio Cultural Digital.
