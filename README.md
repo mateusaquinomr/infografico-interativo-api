@@ -79,7 +79,7 @@ A API foi projetada para expansão futura, permitindo:
 
 ---
 
-## 👨‍💻 Autor
+## Desenvolvedor
 
 Mateus de Aquino -
 Universidade Federal do Ceará (UFC)
