@@ -85,8 +85,6 @@ A API foi projetada para expansão futura, permitindo:
   - Livro dos Saberes  
   - Livro das Celebrações  
   - Livro dos Lugares  
-- Expansão do sistema de autenticação  
-- Evolução para painel administrativo completo  
 
 ---
 
