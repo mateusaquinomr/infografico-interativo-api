@@ -47,21 +47,12 @@ server.js → Rotas → Controllers → Models → MongoDB
 
 ## Estrutura do Projeto
 
-infografico-interativo-api/
-├── server.js
-├── .env
-├── models/
-│   ├── User.js
-│   └── Bem.js
-├── routes/
-│   ├── auth.js
-│   └── bens.js
-├── controllers/
-│   ├── authController.js
-│   └── bemController.js
-├── middleware/
-│   └── auth.js
-
+- server.js → ponto de entrada da aplicação  
+- models/ → esquemas do banco de dados (MongoDB)  
+- routes/ → rotas da API (endpoints)  
+- controllers/ → lógica de negócio da aplicação  
+- middleware/ → autenticação e validações (guards)
+  
 ---
 
 ## Integração com o Front-end
